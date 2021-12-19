@@ -1,20 +1,26 @@
-import logo from './logo.svg';
 import Navbar from './Navbar';
 import Home from './Home';
-import Onemore from './onemore';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Create from './Create';
+import BlogDetails from './BlogDetails';
+import PageIsNotFound from './PageIsNotFound';
 
 function App() {
 
   return (
-    <div className="App">
-      <Navbar />
-      <div className="content">
-        <Home />
-        <div className="onemore">
-        <Onemore />
+    <Router>
+      <div className="App">
+        <Navbar />
+          <div className="content">
+            <Routes>
+            <Route exact path="/" element={<Home/>} />.
+            <Route exact path="/create" element={<Create/>} />.
+            <Route exact path="/blogs/:id" element={<BlogDetails/>} />.
+            <Route path="*" element={<PageIsNotFound/>}/>.
+            </Routes>
+        </div>
       </div>
-      </div>
-    </div>
+    </Router>
   );
 }
 
