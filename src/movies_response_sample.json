@@ -1,6 +1,4 @@
-
 {
-   "page":1,
    "results":[
       {
          "id":550988,
@@ -419,7 +417,5 @@
          "popularity":434.562,
          "media_type":"movie"
       }
-   ],
-   "total_pages":1000,
-   "total_results":20000
+   ]
 }
